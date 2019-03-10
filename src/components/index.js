@@ -16,12 +16,6 @@ export default class TodoIndex extends React.Component{
       currentSelect: 'all'
     }
   }
-  filterTodoData(flag = false) {
-    const data = [...this.state.todoList]
-    return data.filter(item => {
-      return flag ? item.completed : item.completed
-    })
-  }
   handleReceiveTodo = (todo) => {
     this.setState({
       todoList: [todo, ...this.state.todoList]
